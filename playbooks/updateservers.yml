@@ -1,0 +1,35 @@
+---
+
+- hosts: ubuntuservers
+  vars:
+  remote_user: louis
+
+  tasks:
+    - name: update
+      become: yes
+      become_method: sudo      
+      apt:
+          update_cache: yes
+          
+    - name: upgrade
+      become: yes
+      become_method: sudo
+      apt:
+          upgrade: yes
+
+- hosts: amazon
+  remote_user: ubuntu
+
+  tasks:
+    - name: update
+      become: yes
+      become_method: sudo
+      apt:
+          update_cache: yes
+
+    - name: upgrade
+      become: yes
+      become_method: sudo
+      apt:
+          upgrade: yes
+    
