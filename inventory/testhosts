@@ -24,9 +24,9 @@ ubuntuservers
 
 [ubuntuservers]
 #192.168.0.27:22
-master  ansible_host=192.168.0.27
-slave   ansible_host=192.168.0.29
-slave2  ansible_host=192.168.0.28
+dockermaster  ansible_host=192.168.0.27
+dockerslave   ansible_host=192.168.0.29
+dockerslave2  ansible_host=192.168.0.28
 
 [ubuntuservers:vars]
 ansible_sudo_pass=password
