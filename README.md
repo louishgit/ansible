@@ -1,11 +1,6 @@
-# ansible
+# Ansible
 
-My project to run ansible controller
+### My project to run ansible controller
 
-aws - instance needs aptitude installed to do updates
-  tasks:
-    - name: install apt requirements
-      become: yes
-      become_method: sudo
-      apt: 
-          pkg=aptitude
+- aws - instance needs aptitude installed to do updates
+- ansible-playbook -i inventory/<hosts-file>  playbooks/<playbook>.yml
