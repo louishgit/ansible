@@ -13,8 +13,11 @@ localservers
 [remoteservers:children]
 amazon
 
-[amazon]
-aws ansible_host=35.164.239.146
+[amazon:children]
+amazonubuntu
+
+[amazonubuntu]
+aws
 
 [amazon:vars]
 ansible_port=22
