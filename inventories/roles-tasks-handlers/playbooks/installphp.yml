@@ -1,0 +1,3 @@
+- hosts: remoteservers
+  roles:
+    - { role: ilyes512.php, tag: ['ansidev.php'] }
