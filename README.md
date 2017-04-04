@@ -1,6 +1,4 @@
-# Ansible
-
-### My project to run ansible controller
+# Ansible controller
 
 - Set up infrastructure
     - Ansible controller

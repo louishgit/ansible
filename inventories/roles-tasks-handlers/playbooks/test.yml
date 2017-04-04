@@ -1,0 +1,27 @@
+---
+
+- hosts: localservers
+  vars:
+  remote_user: louis
+
+  tasks:
+    - name: test connection
+      ping:
+      remote_user: louis    
+
+
+- hosts: remoteservers
+  vars:
+
+  tasks:
+    - name: test connection
+      ping:
+      remote_user: ubuntu
+
+- hosts: dockerswarm
+  vars:
+
+  tasks:
+    - name: hello
+      remote_user: ubuntu
+      command: uname -a

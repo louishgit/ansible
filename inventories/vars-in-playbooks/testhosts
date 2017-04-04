@@ -1,0 +1,35 @@
+#[all:vars]
+#var=value
+
+[dockerswarm:children]
+remoteservers
+localservers
+
+[dockerswarm:vars]
+
+[remoteservers:children]
+amazon
+
+[amazon]
+aws ansible_host=35.164.239.146
+
+[amazon:vars]
+ansible_port=22
+ansible_connection=ssh 
+ansible_user=ubuntu 
+private_key_file=/home/louis/.ssh/aws_ssh.pem
+
+[localservers:children]
+ubuntuservers
+
+[ubuntuservers]
+#192.168.0.27:22
+dockermaster  ansible_host=192.168.0.27
+dockerslave   ansible_host=192.168.0.29
+dockerslave2  ansible_host=192.168.0.28
+
+[ubuntuservers:vars]
+ansible_sudo_pass=password
+ansible_port=22 
+ansible_connection=ssh 
+ansible_user=louis

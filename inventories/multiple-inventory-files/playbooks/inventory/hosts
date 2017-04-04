@@ -1,0 +1,29 @@
+# group servers by name, all vars for groups or hosts are specified in group_vars & host_vars respectively.
+# group_vars & host_vars can live in inventory and/or playbooks directories, if in playbooks dir then will take precedence.
+
+#[all:vars]
+#var=value
+
+[dockerswarm:children]
+remoteservers
+localservers
+
+[dockerswarm:vars]
+
+[remoteservers:children]
+amazon
+
+[amazon:children]
+amazonubuntu
+
+[amazonubuntu]
+aws
+
+[localservers:children]
+ubuntuservers
+
+[ubuntuservers]
+dockermaster
+dockerslave
+dockerslave2
+
