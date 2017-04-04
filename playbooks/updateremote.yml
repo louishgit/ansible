@@ -1,6 +1,6 @@
 ---
 
-- hosts: remoteservers
+- hosts: amazon
 #  remote_user: ubuntu
 
   tasks:
