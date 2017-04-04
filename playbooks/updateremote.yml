@@ -1,8 +1,5 @@
 ---
 
-inventory = /home/louis/ansible/inventory/hosts
-
-
 - hosts: remoteservers
 #  remote_user: ubuntu
 
