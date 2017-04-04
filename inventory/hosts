@@ -13,11 +13,15 @@ localservers
 [remoteservers:children]
 amazon
 
-[amazon:children]
-amazonubuntu
-
-[amazonubuntu]
+[amazon]
 aws ansible_host=35.164.239.146
+
+[amazon:vars]
+ansible_port=22
+ansible_connection=ssh
+ansible_user=ubuntu
+private_key_file=/home/louis/.ssh/aws_ssh.pem
+
 
 [localservers:children]
 ubuntuservers
