@@ -3,7 +3,12 @@
 ### My project to run ansible controller
 
 - aws - instance needs aptitude installed to do updates
-- ansible-playbook -i inventory/<hosts-file>  playbooks/<playbook>.yml
-- ansible.cfg does not get read from playbooks dir, use root dir to store ansible.cfg
-- specify hosts file in ansible.cfg hostfile = /absolute/path/to/hosts (relative not working)
+
+- inventory
+    - specify cmd line
+        - ansible-playbook -i inventory/<hosts-file>  playbooks/<playbook>.yml
+    - specify from /inventory/ansible.cfg OR /inventory/playbooks/ansible.cfg (latter takes precedence)
+        - [defaults]
+        - hostfile = /relative/path/to/hosts
+        
 - ansible-playbook  /path/to/playbook.yml
