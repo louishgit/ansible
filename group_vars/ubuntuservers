@@ -1,4 +1,4 @@
-ansible_sudo_pass=password
-ansible_port=22
-ansible_connection=ssh
-ansible_user=louis
+ansible_sudo_pass: password
+ansible_port: 22
+ansible_connection: ssh
+ansible_user: louis
