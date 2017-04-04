@@ -1,0 +1,26 @@
+---
+ansidev_package_state: present
+ansidev_production: false
+
+php_packages_state: "{{ ansidev_package_state }}"
+php_ppa: php # leave empty, if you dont want to use the PPA
+php_fpm_state: "{{ ansidev_package_state }}" # latest|absent|present|build-dep
+php_packages:
+  - php7.0-common
+  - php-redis
+  - php7.0-mysql
+  - php7.0-pgsql
+  - php7.0-sqlite3
+  - php7.0-curl
+  - php7.0-gd
+  - php-memcached
+  - php-imagick
+  - php7.0-json
+  - php7.0-intl
+  - php7.0-mbstring
+  - php7.0-dom
+  - php7.0-zip
+php_dev_packages:
+  - php7.0-phpdbg
+php_production_packages: []
+php_xdebug: false
