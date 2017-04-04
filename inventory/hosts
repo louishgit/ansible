@@ -13,7 +13,10 @@ localservers
 [remoteservers:children]
 amazon
 
-[amazon]
+[amazon:children]
+amazonubuntu
+
+[amazonubuntu]
 aws
 
 [localservers:children]
